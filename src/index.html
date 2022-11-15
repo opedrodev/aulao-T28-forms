@@ -11,14 +11,121 @@
 
     <form>
       <!-- ! DADOS PESSOAIS -->
+      <fieldset id="dados-pessoais">
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome">
+          Nome
+          <input type="text" name="nome" id="nome">
+        </label>
+        <label for="sobrenome">
+          Sobrenome
+          <input type="text" name="sobrenome" id="sobrenome">
+        </label>
+        <label for="email">
+          Email
+          <input type="email" name="email" id="email">
+        </label>
+        <label for="data">
+          Data de Nascimento
+          <input type="date" name="data" id="data">
+        </label>
+      </fieldset>
 
       <!-- ! HABILIDADES -->
+      <fieldset id="habilidades">
+        <legend>Habilidades</legend>
+
+        <p>Selecione suas habilidades</p>
+
+        <section>
+          <label for="git">
+            <input type="checkbox" name="git" id="git">
+            Git
+          </label>
+          <label for="html">
+            <input type="checkbox" name="html" id="html">
+            HTML
+          </label>
+          <label for="javascript">
+            <input type="checkbox" name="javascript" id="javascript">
+            Git
+          </label>
+          <label for="css">
+            <input type="checkbox" name="css" id="css">
+            CSS
+          </label>
+        </section>
+
+        <section>
+          <label for="comunicacao">
+            <input type="checkbox" name="comunicacao" id="comunicacao">
+            Comunicação
+          </label>
+          <label for="colaboracao">
+            <input type="checkbox" name="colaboracao" id="colaboracao">
+            Colaboração
+          </label>
+          <label for="resiliencia">
+            <input type="checkbox" name="resiliencia" id="resiliencia">
+            Resiliência
+          </label>
+          <label for="lideranca">
+            <input type="checkbox" name="lideranca" id="lideranca">
+            Liderança
+          </label>
+        </section>
+
+      </fieldset>
 
       <!-- ! SOBRE -->
+      <fieldset id="sobre">
+        <legend>Sobre</legend>
+
+        <p>Nos conte um pouco sobre você</p>
+
+        <div>
+          <textarea name="sobre" id="sobre" cols="30" rows="10"></textarea>
+          <p>250</p>
+        </div>
+      </fieldset>
 
       <!-- ! FEEDBACK -->
+      <fieldset id="feedback">
+        <legend>Feedback</legend>
+
+        <p>Como você avalia esse formulário?</p>
+
+        <section id="notas">
+          <label for="um">
+            1
+            <input type="radio" name="notas" id="um" value="1">
+          </label>
+          <label for="dois">
+            2
+            <input type="radio" name="notas" id="dois" value="2">
+          </label>
+          <label for="tres">
+            3
+            <input type="radio" name="notas" id="tres" value="3">
+          </label>
+          <label for="quatro">
+            4
+            <input type="radio" name="notas" id="quatro" value="4">
+          </label>
+          <label for="cinco">
+            5
+            <input type="radio" name="notas" id="cinco" value="5">
+          </label>
+        </section>
+      </fieldset>
 
       <!-- ! TERMOS -->
+      <section id="termos">
+        <p>Você concorda com nossos termos de <a href="#">Política de Privacidade</a>?</p>
+        <input type="checkbox" name="termos" id="termos">
+        <button disabled type="button">Enviar Formulário</button>
+      </section>
     </form>
 
     <script src="./script.js"></script>
