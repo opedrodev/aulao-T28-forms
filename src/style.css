@@ -1,1 +1,166 @@
-/* styles here */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap');
+
+:root {
+  --purple: #9B81E5;
+  --purple-shade: #6F51C9;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  color: #ffffff;
+
+  height: 100vh; /* ? View Height */
+  width: 100vw; /* ? View Width */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Rubik', sans-serif;
+}
+
+input, textarea {
+  background-color: rgba(0, 0, 0, .3);
+  color: #ffffff;
+  border: none;
+  padding: 4px 6px;
+}
+
+form {
+  width: 600px;
+  background-color: rgba(0, 0, 0, .3);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+}
+
+legend {
+  padding: 8px;
+}
+
+fieldset {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  margin-bottom: 8px;
+}
+
+input {
+  height: 22px;
+}
+
+#dados-pessoais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+#dados-pessoais > label {
+  display: flex;
+  flex-direction: column;
+}
+
+#habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#habilidades > p {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+}
+
+#habilidades > section {
+  display: flex;
+  flex-direction: column;
+}
+
+#habilidades > section > label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#sobre > p {
+  margin-bottom: 8px;
+}
+
+#sobre > div {
+  position: relative;
+}
+
+#sobre > div > textarea {
+  width: 100%;
+  resize: none;
+}
+
+#sobre > div > p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-9px, -9px);
+}
+
+#feedback > p {
+  margin-bottom: 8px;
+}
+
+#notas {
+  display: flex;
+  gap: 22px;
+}
+
+#notas > label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#termos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 32px;
+}
+
+#termos > button {
+  grid-column: 1 / -1;
+  background-color: var(--purple);
+  border: none;
+  padding: 8px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+#termos > button:hover {
+  background-color: var(--purple-shade);
+}
+
+#termos > button:disabled {
+  cursor: not-allowed;
+  background-color: var(--purple);
+  opacity: 50%;
+}
+
+a:link, a:visited {
+  color: var(--purple);
+  transition: .3s all;
+}
+
+a:hover, a:active {
+  color: var(--purple-shade);
+}
